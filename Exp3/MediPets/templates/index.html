@@ -2,20 +2,20 @@
 <html>
     <head>
         
-        <title>MediPets</title>   
-        <link rel="icon" href="img/Icon.png">   
+        <title>MediPets</title>    
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <link href="css/styles.css" type="text/css" rel="stylesheet">
-        <link rel="stylesheet" href="css/fonts.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+        {%load static%}
+        <link rel="icon" href="{% static 'MediPets/img/Icon.png' %}">   
+        <link rel="stylesheet" type="text/css" href="{% static 'MediPets/css/styles.css' %}">
+        <link href="{% static 'MediPets/css/styles.css' %" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'MediPets/css/fonts.css' %}">
 
     </head>
     <body>
-       
+      {%load static%}
       <a href="index.html">
-        {%load static%}
         <img  src ="{% static 'MediPets/img/logo_large.png' %}" width="350px"  height= "85" ></a>
         <br>
         <header>
@@ -52,20 +52,20 @@
               <!-- diapositivas -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img class="d-block w-100" src="img/imagenfacha.jpg" width="500" height="500" alt="">
+                  <img class="d-block w-100" src="{% static 'MediPets/img/imagenfacha.jpg' %}" width="500" height="500" alt="">
                     <div class="carousel-caption">
                       <h3 class="tamaño">Mantenemos el bienestar de tus mascotas</h3 >                   
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="img/muchosanimales.jpg" width="500" height="500" alt="">
+                    <img class="d-block w-100" src="{% static 'MediPets/img/muchosanimales.jpg' %}" width="500" height="500" alt="">
                     <div class="carousel-caption">
                       <h3  class="tamaño">ten a tus mascotas bonitas y saludables</h3>
                       
                     </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="img/foto3.jpg " width="500" height="500" alt="">
+                        <img class="d-block w-100" src="{% static 'MediPets/img/foto3.jpg' %}" width="500" height="500" alt="">
                         <div class="carousel-caption">
                           <h3  class="tamaño">Ellos tambien son parte de tu familia</h3>
                           
@@ -116,10 +116,10 @@
             <p>Atención de 10 a 20hrs</p></div>
             <h5 class="copy">«Copyright 2020 por MediPets Chile»</h5>
             <figure>
-              <img src="img/iconfb.png" width="13px" height="13px">
+              <img src="{% static 'MediPets/img/iconfb.png' %}" width="13px" height="13px">
             </figure>
-            <figure><img src="img/iconig.png" width="13px" height="13px"></figure>
-            <figure><img src="img/icontwitter.png" width="13px" height="13px"></figure>
+            <figure><img src="{% static 'MediPets/img/iconig.png' %}" width="13px" height="13px"></figure>
+            <figure><img src="{% static 'MediPets/img/icontwitter.png' %}" width="13px" height="13px"></figure>
           </div>
         </div>
         
