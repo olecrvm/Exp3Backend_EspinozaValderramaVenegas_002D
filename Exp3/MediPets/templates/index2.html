@@ -70,10 +70,10 @@
     </head>
     <body>
        
-     <a href="index.html">
+     <a href="{% url 'index' %}">
           <img  src ="{% static 'MediPets/img/logo_large.png' %}" width="350px"  height= "85" ></a>
         <header>
-          <a href="index4" class="login">
+          <a href="{% url 'iniciosesion' %}" class="login">
             <span class="icon-user"></span>Iniciar Sesion
             </a>
           <h1>Galería de productos</h1>
@@ -83,13 +83,13 @@
           <nav class="menu flex-container" id="backgroundhead">
             <center>
               <ul>
-                  <li><a href="index" class="button home radius large ">
-                      <span class="icon-home"></span>Inicio</a></li>
-                  <li><a href="index2" class="button Fotos large radius ">
-                      <span class="icon-images"></span>Productos</a></li>
-                  <li><a href="index3" class="button QuienesSomos large radius ">
-                      <span class="icon-users"></span>Nosotros</a></li>
-              </ul>
+                <li><a href="{% url 'index' %}" class="button home radius large ">
+                    <span class="icon-home"></span>Inicio</a></li>
+                <li><a href="{% url 'galeria' %}" class="button Fotos large radius ">
+                    <span class="icon-images"></span>Galeria</a></li>
+                <li><a href="{% url 'nosotros' %}" class="button QuienesSomos large radius ">
+                    <span class="icon-users"></span>Nosotros</a></li>
+            </ul>
             </center>
           </nav>
       </header>

@@ -2,47 +2,49 @@
 <html>
     <head>
         
-        <title>MediPets</title>   
-        <link rel="icon" href="img/Icon.png">   
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <link href="css/styles.css" type="text/css" rel="stylesheet">
-        <link rel="stylesheet" href="css/fonts.css">
+      <title>MediPets</title>    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+      {%load static%}
+      <link rel="icon" href="{% static 'MediPets/img/Icon.png' %}">   
+      <link rel="stylesheet" type="text/css" href="{% static 'MediPets/css/styles.css' %}">
+      <link href="{% static 'MediPets/css/styles.css' %" type="text/css" rel="stylesheet">
+      <link rel="stylesheet" href="{% static 'MediPets/css/fonts.css' %}">
 
     </head>
     <body>
     <main>
-      <a href="index.html">
-        <img  src ="img/logo_large.png" width="350px"  height= "85" ></a>
-      <br>
-      <header>
-        <a href="index4.html" class="login">
-          <span class="icon-user"></span>Iniciar Sesion
-          </a>
-        <h1>Nosotros</h1>
-        <input type="checkbox" id="btnMenu">
-        <label for="btnMenu" class="icon-menu">
-        </label>
-        <nav class="menu flex-container" id="backgroundhead">
-          <center>
-            <ul>
-                <li><a href="index.html" class="button home radius large ">
+      {%load static%}
+      <a href="{% url 'index' %}">
+        <img  src ="{% static 'MediPets/img/logo_large.png' %}" width="350px"  height= "85" ></a>
+        <br>
+        <header>
+          <a href="{% url 'iniciosesion' %}" class="login">
+            <span class="icon-user"></span>Iniciar Sesion
+            </a>
+          <h1>Bienvenidos a MediPets</h1>
+          <input type="checkbox" id="btnMenu">
+          <label for="btnMenu" class="icon-menu">
+          </label>
+          <nav class="menu flex-container" id="backgroundhead">
+            <center>
+              <ul>
+                <li><a href="{% url 'index' %}" class="button home radius large ">
                     <span class="icon-home"></span>Inicio</a></li>
-                <li><a href="index2.html" class="button Fotos large radius ">
+                <li><a href="{% url 'galeria' %}" class="button Fotos large radius ">
                     <span class="icon-images"></span>Galeria</a></li>
-                <li><a href="index3.html" class="button QuienesSomos large radius ">
+                <li><a href="{% url 'nosotros' %}" class="button QuienesSomos large radius ">
                     <span class="icon-users"></span>Nosotros</a></li>
             </ul>
-          </center>
-        </nav>
-    </header>
+            </center>
+          </nav>
+      </header>
       <br><br><br><br><br>
       <div class="container">
         <div class="izq">
         <h3>Objetivo</h3>
-        <img src="img/Q1.png" width="500" height="400">
+        <img src="{% static 'MediPets/img/Q1.png' %}" width="500" height="400">
         <p >Nuestro sitio web esta pensado para brindar conocimientos y ayudar a familias que no saben los cuidados que deben matener sus mascotas. Además de ofrecer variedad de medicamentos y accesesorios con excelente calidad a menor precio que las demas veterinarias.</p>
         </div>
       </div>
@@ -51,7 +53,7 @@
           <div class="der">
           <h3>Misión</h3>
           <br>
-          <img src="img/Q2.jpg" width="500" height="300">
+          <img src="{% static 'MediPets/img/Q2.jpg' %}" width="500" height="300">
           <p>Nuestra misión es asegurar la mejor calidad posible, junto con el profesionalismo de nuestros veterinarios; la mayor variedad disponible de productos farmacéuticos, aseo, alimenticios y accesorios a su elección. Siempre ofreciendole a nuestros clientes un servicio accesible comodo y amable.</p>
           </div>
         </div>
@@ -61,7 +63,7 @@
           <div class="der">
             <h3>Visión</h3>
             <br>
-            <img src="img/vetes.jpg" width="400" height="320">
+            <img src="{% static 'MediPets/img/vetes.jpg' %}" width="400" height="320">
             <p>Ser líderes en servicios médicos veterinarios y de bienestar. Brindando calidad, innovación y profesionalismo, teniendo como objetivo final mejorar la calidad de vida de nuestras mascotas y por medio de ello también la de sus familias.</p>
           </div>
         </div>
@@ -70,7 +72,7 @@
           <div class="izq">
             <h3 >Valores</h3>
             <br>
-            <img src="img/q3.jpg" width="500" height="300">
+            <img src="{% static 'MediPets/img/q3.jpg' %}" width="500" height="300">
             <p>Nuestros valores hacen de MediPets un lugar centrado en la tenencia responsable, por ello concebimos la medicina preventiva como mejor opción para evitar enfermedades, sufrimiento y gastos excesivos; la opinión y educación de nuestros clientes es necesaria para mejorar el cuidado de sus animales; y la capacidad de establecer una relación cercana, cordial, cálida y personalizada.</p>
           </div>
         </div>
@@ -89,7 +91,7 @@
               <h3>Muestra de nuestro trabajo</h3>
               <br>
               <a href="https://www.youtube.com/watch?v=Zd4smpQa31k&ab_channel=MaxTheHusky" target="_blank">
-              <img src="img/videox.jpeg" width="500" height="300">
+              <img src="{% static 'MediPets/img/videox.jpeg' %}" width="500" height="300">
               </a>
               <p>Finalmente les invitamos a ver la experiencia de un de nuestros clientes:</p>
               <br><br><br><br><br><br><br><br><br>
@@ -118,10 +120,10 @@
         <p>Atención de 10 a 20hrs</p></div>
         <h5 class="copy">«Copyright 2020 por MediPets Chile»</h5>
         <figure>
-          <img src="img/iconfb.png" width="13px" height="13px">
+          <img src="{% static 'MediPets/img/iconfb.png' %}" width="13px" height="13px">
         </figure>
-        <figure><img src="img/iconig.png" width="13px" height="13px"></figure>
-        <figure><img src="img/icontwitter.png" width="13px" height="13px"></figure>
+        <figure><img src="{% static 'MediPets/img/iconig.png' %}" width="13px" height="13px"></figure>
+        <figure><img src="{% static 'MediPets/img/icontwitter.png' %}" width="13px" height="13px"></figure>
       </div>
     </div>
         

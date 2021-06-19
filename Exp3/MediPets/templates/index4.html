@@ -2,11 +2,15 @@
 <html lang="Es">
 <head>
     <link rel="icon" href="img/Icon.png">  
-    <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <title>MediPets</title>    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+      {%load static%}
+      <link rel="icon" href="{% static 'MediPets/img/Icon.png' %}">   
+      <link rel="stylesheet" type="text/css" href="{% static 'MediPets/css/styles.css' %}">
+      <link href="{% static 'MediPets/css/styles.css' %" type="text/css" rel="stylesheet">
+      <link rel="stylesheet" href="{% static 'MediPets/css/fonts.css' %}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
     <title>Iniciar Sesion</title>
@@ -91,8 +95,8 @@
 <body>
 
     <main>
-        <a href="index.html">
-        <img  src ="img/logo_large.png" width="350px"  height= "85" ></a>
+        <a href="{% url 'index' %}">
+        <img  src ="{% static 'MediPets/img/logo_large.png' %}" width="350px"  height= "85" ></a>
     <div class="contenedorTodo">
         <div class="cajaTrasera">
             <div class="cajaTraseraLogin">
