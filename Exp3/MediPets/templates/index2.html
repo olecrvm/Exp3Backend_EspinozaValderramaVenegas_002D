@@ -3,21 +3,23 @@
     <head>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <title>MediPets</title> 
-        <link rel="icon" href="img/Icon.png">  
+        {%load static%}
+        <link rel="icon" href="{% static 'MediPets/img/Icon.png' %}"> 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <link href="css/styles.css" type="text/css" rel="stylesheet">
-        <link rel="stylesheet" href="css/fonts.css">
-        <link rel="stylesheet" type="text/css" href="alertifyjs/css/alertify.css">
-	   <link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/default.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'MediPets/css/styles.css' %}">
+        <link href="{% static 'MediPets/css/styles.css' %}" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'MediPets/css/fonts.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'MediPets/alertifyjs/css/alertify.css' %}">
+	   <link rel="stylesheet" type="text/css" href="{% static 'MediPets/alertifyjs/css/themes/default.css' %}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 
-	<script src="jquery-3.2.1.min.js"></script>
-	<script src="alertifyjs/alertify.js"></script>
+	<script src="{% static 'jquery-3.2.1.min.js' %}"></script>
+  {%load static%}
+	<script src="{% static 'alertifyjs/alertify.js' %}"></script>
      <script type="text/javascript">
 
 		$(document).ready(function(){
@@ -70,9 +72,9 @@
     <body>
        
      <a href="index.html">
-          <img  src ="img/logo_large.png" width="350px"  height= "85" ></a>
+          <img  src ="{% static 'MediPets/img/logo_large.png' %}" width="350px"  height= "85" ></a>
         <header>
-          <a href="index4.html" class="login">
+          <a href="index4" class="login">
             <span class="icon-user"></span>Iniciar Sesion
             </a>
           <h1>Galería de productos</h1>
@@ -82,11 +84,11 @@
           <nav class="menu flex-container" id="backgroundhead">
             <center>
               <ul>
-                  <li><a href="index.html" class="button home radius large ">
+                  <li><a href="index" class="button home radius large ">
                       <span class="icon-home"></span>Inicio</a></li>
-                  <li><a href="index2.html" class="button Fotos large radius ">
+                  <li><a href="index2" class="button Fotos large radius ">
                       <span class="icon-images"></span>Productos</a></li>
-                  <li><a href="index3.html" class="button QuienesSomos large radius ">
+                  <li><a href="index3" class="button QuienesSomos large radius ">
                       <span class="icon-users"></span>Nosotros</a></li>
               </ul>
             </center>
@@ -99,21 +101,21 @@
                
                <div class="col-xl-4 ">
                     <div class="material-placeholder">
-                         <img src="./img/1.jpg" alt="" class="responsive-img materialboxed" data-caption="Oxyfresh Gel Dental es una pasta de dientes en gel imprescindible para todos los padres de mascotas. Su relajante mezcla de Oxygene® y áloe limpia suavemente y desodoriza los dientes y las encías. ">
+                         <img src="{% static 'MediPets/img/1.jpg' %}" alt="" class="responsive-img materialboxed" data-caption="Oxyfresh Gel Dental es una pasta de dientes en gel imprescindible para todos los padres de mascotas. Su relajante mezcla de Oxygene® y áloe limpia suavemente y desodoriza los dientes y las encías. ">
                          <a href="https://www.felinus.cl/cuidado-dental/oxyfresh-gel-dental.html" target="_blank"><h6 class="textGreen">Oxyfresh Gel Dental <br> $15.000</h6></a>
                     </div>
                </div>
                
                <div class="col-xl-4 ">
                     <div class="material-placeholder">
-                         <img src="./img/2.jpg" alt="" class="responsive-img materialboxed" data-caption="Oxyfresh Shampoo para Mascotas. Su fórmula ha sido diseñada con pH balanceado para apoyar y calmar la delicada piel de las mascotas que sufren de alergia. ">
+                         <img src="{% static 'MediPets/img/2.jpg' %}" alt="" class="responsive-img materialboxed" data-caption="Oxyfresh Shampoo para Mascotas. Su fórmula ha sido diseñada con pH balanceado para apoyar y calmar la delicada piel de las mascotas que sufren de alergia. ">
                          <a id="msj"><h6 class="textRed">Oxyfresh Shampoo <br> $11.990</h6></a>
                     </div>
                </div>
 
                <div class="col-xl-4 ">
                   <div class="material-placeholder">
-                       <img src="./img/3.jpg" alt="" class="responsive-img materialboxed" data-caption="Es un antiparasitario formulado para matar de forma rápida pulgas, piojos y garrapatas en perros y gatos. Su composición lo hace apto para usarse en mascotas desde los 2 días de vida. ">
+                       <img src="{% static 'MediPets/img/3.jpg' %}" alt="" class="responsive-img materialboxed" data-caption="Es un antiparasitario formulado para matar de forma rápida pulgas, piojos y garrapatas en perros y gatos. Su composición lo hace apto para usarse en mascotas desde los 2 días de vida. ">
                        <A href="https://www.felinus.cl/antiparasitarios/frontline-spray-antipulgas-perros-y-gatos.html" target="_blank"><h6 class="textGreen">FrontLine Spray Antipulgas <br> $7.990</h6></A>
                   </div>
                </div>   
@@ -123,21 +125,21 @@
           <div class="row galeria">
                   <div class="col-xl-4 ">
                       <div class="material-placeholder">
-                           <img src="img/4.jpg" alt="" class="responsive-img materialboxed" data-caption="Es una forma perfecta para mantener la higiene dental de tu felino en perfecto estado. Ayuda a mantener un aliento fresco y prevenir la formación de sarro. ">
+                           <img src="{% static 'MediPets/img/4.jpg' %}" alt="" class="responsive-img materialboxed" data-caption="Es una forma perfecta para mantener la higiene dental de tu felino en perfecto estado. Ayuda a mantener un aliento fresco y prevenir la formación de sarro. ">
                            <a id="msj2"><h6 class="textRed">Trixie Set De Higiene Para gatos <br> $5.990</h6></a>
                       </div>
              </div>
 
              <div class="col-xl-4 ">
                    <div class="material-placeholder">
-                        <img src="img/5.jpg" alt="" class="responsive-img materialboxed" data-caption="Es un efectiva forma de mejorar la higiene bucal de tu gato. Viene en forma granulada,  Es rico en yodo natural y contiene importantes vitaminas y minerales, y está libre de colorantes artificiales, conservantes, gluten y azúcar.   ">
+                        <img src="{% static 'MediPets/img/5.jpg' %}" alt="" class="responsive-img materialboxed" data-caption="Es un efectiva forma de mejorar la higiene bucal de tu gato. Viene en forma granulada,  Es rico en yodo natural y contiene importantes vitaminas y minerales, y está libre de colorantes artificiales, conservantes, gluten y azúcar.   ">
                         <A href="https://www.felinus.cl/cuidado-dental/proden-plaqueoff-polvo-gatos.html" target="_blank"><h6 class="textGreen" >Proden Plaqueoff Polvos Gatos <br> $19.990</h6></A>
                    </div>
               </div>
 
               <div class="col-xl-4 ">
                    <div class="material-placeholder">
-                        <img src="img/6.jpg" alt="" class="responsive-img materialboxed" data-caption=" es un producto 100% natural que ayuda a calmar, tranquilizar y a bajar la ansiedad de perros y gatos. Es ideal para situaciones estresantes como viajes, mudanzas, ruidos fuertes, entre otros.   ">
+                        <img src="{% static 'MediPets/img/6.jpg' %}" alt="" class="responsive-img materialboxed" data-caption=" es un producto 100% natural que ayuda a calmar, tranquilizar y a bajar la ansiedad de perros y gatos. Es ideal para situaciones estresantes como viajes, mudanzas, ruidos fuertes, entre otros.   ">
                         <a id="msj3"><h6 class="textRed">Calmer Spray Aromaterapia Para Mascotas <br> $18.990</h6></a>
                    </div>
               </div>
@@ -195,16 +197,16 @@
             <p>Atención de 10 a 20hrs</p></div>
             <h5 class="copy">«Copyright 2020 por MediPets Chile»</h5>
             <figure>
-              <img src="img/iconfb.png" width="13px" height="13px">
+              <img src="{% static 'MediPets/img/iconfb.png' %}" width="13px" height="13px">
             </figure>
-            <figure><img src="img/iconig.png" width="13px" height="13px"></figure>
-            <figure><img src="img/icontwitter.png" width="13px" height="13px"></figure>
+            <figure><img src="{% static 'MediPets/img/iconig.png' %}" width="13px" height="13px"></figure>
+            <figure><img src="{% static 'MediPets/img/icontwitter.png' %}" width="13px" height="13px"></figure>
           </div>
         </div>
     
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="{% static 'MediPets/js/main.js' %}"></script>
      </body>
 </html>

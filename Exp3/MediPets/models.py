@@ -10,7 +10,7 @@ class TipoMascota(models.Model):
         return(self.nomTipo)
 
 class Mascota(models.Model):
-    nroChip=models.CharField(primary_key=True, max_length=6, verbose_name='Numero de Chip: ')
+    nroChip=models.CharField(primary_key=True, max_length=8, verbose_name='Numero de Chip: ')
     nombre=models.CharField(max_length=30, verbose_name='Nombre de la Mascota: ')
     dueno=models.CharField(max_length=30, verbose_name='Nombre del dueño de la Mascota: ')
     tipo=models.ForeignKey(TipoMascota, on_delete=models.CASCADE)
