@@ -11,23 +11,22 @@
         <link rel="stylesheet" type="text/css" href="{% static 'MediPets/css/styles.css' %}">
         <link href="{% static 'MediPets/css/styles.css' %}" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'MediPets/css/fonts.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'MediPets/alertifyjs/css/alertify.css' %}">
-	   <link rel="stylesheet" type="text/css" href="{% static 'MediPets/alertifyjs/css/themes/default.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'alertifyjs/css/alertify.css' %}">
+	   <link rel="stylesheet" type="text/css" href="{% static 'alertifyjs/css/themes/default.css' %}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 
-	<script src="{% static 'jquery-3.2.1.min.js' %}"></script>
-  {%load static%}
+	<script src="{% static 'MediPets/js/jquery-3.2.1.min.js' %}"></script>
 	<script src="{% static 'alertifyjs/alertify.js' %}"></script>
      <script type="text/javascript">
-
-		$(document).ready(function(){
+      $(document).ready(function(){
 			
 			$('#ejecuta').click(function(){			
 				alertify.alert('Mensaje de ayuda de Medipets', 'Si el precio del producto se encuentra en rojo, quiere decir que no está disponible.',  function(){ alertify.success('Espero haberte ayudado :)'); }) ;
 			});
 		})
+	
 
           $(document).ready(function()
         {

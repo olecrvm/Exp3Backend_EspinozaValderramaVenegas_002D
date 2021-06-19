@@ -88,4 +88,11 @@ $(document).ready(function()
                     });
             });
         })
-
+function Cajita(){
+$(document).ready(function(){
+			
+	$('#ejecuta').click(function(){			
+		alertify.alert('Mensaje de ayuda de Medipets', 'Si el precio del producto se encuentra en rojo, quiere decir que no está disponible.',  function(){ alertify.success('Espero haberte ayudado :)'); }) ;
+		});
+	})
+}
