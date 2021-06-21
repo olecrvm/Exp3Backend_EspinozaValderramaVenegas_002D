@@ -3,14 +3,14 @@
     <head>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <title>MediPets</title> 
-        {%load static%}
+        {%load static %}
         <link rel="icon" href="{% static 'MediPets/img/Icon.png' %}"> 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
         <link rel="stylesheet" type="text/css" href="{% static 'MediPets/css/styles.css' %}">
         <link href="{% static 'MediPets/css/styles.css' %}" type="text/css" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'MediPets/css/fonts.css' %}">
+        <link rel="stylesheet" href="{% static 'MediPets/css/Fonts.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'alertifyjs/css/alertify.css' %}">
 	   <link rel="stylesheet" type="text/css" href="{% static 'alertifyjs/css/themes/default.css' %}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -69,13 +69,16 @@
 	</script>
     </head>
     <body>
-       
+      {%load static%}
      <a href="{% url 'index' %}">
           <img  src ="{% static 'MediPets/img/logo_large.png' %}" width="350px"  height= "85" ></a>
         <header>
           <a href="{% url 'iniciosesion' %}" class="login">
             <span class="icon-user"></span>Iniciar Sesion
             </a>
+            <a href="{% url 'iniciosesion' %}" class="login">
+              <span class="icon-heart"></span>Mascota
+              </a>
           <h1>Galería de productos</h1>
           <input type="checkbox" id="btnMenu">
           <label for="btnMenu" class="icon-menu">
@@ -83,13 +86,15 @@
           <nav class="menu flex-container" id="backgroundhead">
             <center>
               <ul>
-                <li><a href="{% url 'index' %}" class="button home radius large ">
-                    <span class="icon-home"></span>Inicio</a></li>
-                <li><a href="{% url 'galeria' %}" class="button Fotos large radius ">
-                    <span class="icon-images"></span>Galeria</a></li>
-                <li><a href="{% url 'nosotros' %}" class="button QuienesSomos large radius ">
-                    <span class="icon-users"></span>Nosotros</a></li>
-            </ul>
+                  <li><a href="{% url 'index' %}" class="button home medium  radius  ">
+                      <span class="icon-home"></span>Inicio</a></li>
+                  <li><a href="{% url 'galeria' %}" class="button Fotos medium radius ">
+                      <span class="icon-images"></span>Productos</a></li>
+                  <li><a href="{% url 'nosotros' %}" class="button QuienesSomos medium radius ">
+                      <span class="icon-users"></span>Nosotros</a></li>
+                 <li><a href="{% url 'nosotros' %}" class="button QuienesSomos medium radius ">
+                      <span class="icon-rocket"></span>Mascotas Registradas</a></li>
+              </ul>
             </center>
           </nav>
       </header>

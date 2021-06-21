@@ -23,19 +23,24 @@
           <a href="{% url 'iniciosesion' %}" class="login">
             <span class="icon-user"></span>Iniciar Sesion
             </a>
-          <h1>Bienvenidos a MediPets</h1>
+          <a href="{% url 'iniciosesion' %}" class="login">
+            <span class="icon-heart"></span>Mascota
+            </a>
+          <h1>Nosotros</h1>
           <input type="checkbox" id="btnMenu">
           <label for="btnMenu" class="icon-menu">
           </label>
           <nav class="menu flex-container" id="backgroundhead">
             <center>
               <ul>
-                <li><a href="{% url 'index' %}" class="button home radius large ">
+                <li><a href="{% url 'index' %}" class="button home radius medium ">
                     <span class="icon-home"></span>Inicio</a></li>
-                <li><a href="{% url 'galeria' %}" class="button Fotos large radius ">
+                <li><a href="{% url 'galeria' %}" class="button Fotos medium radius ">
                     <span class="icon-images"></span>Galeria</a></li>
-                <li><a href="{% url 'nosotros' %}" class="button QuienesSomos large radius ">
+                <li><a href="{% url 'nosotros' %}" class="button QuienesSomos medium radius ">
                     <span class="icon-users"></span>Nosotros</a></li>
+                <li><a href="{% url 'nosotros' %}" class="button QuienesSomos medium radius ">
+                    <span class="icon-rocket"></span>Mascotas Registradas</a></li>    
             </ul>
             </center>
           </nav>

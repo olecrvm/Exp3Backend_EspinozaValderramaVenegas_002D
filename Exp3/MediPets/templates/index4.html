@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="Es">
 <head>
-    <link rel="icon" href="img/Icon.png">  
-    <title>MediPets</title>    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
-      {%load static%}
-      <link rel="icon" href="{% static 'MediPets/img/Icon.png' %}">   
-      <link rel="stylesheet" type="text/css" href="{% static 'MediPets/css/styles.css' %}">
-      <link href="{% static 'MediPets/css/styles.css' %" type="text/css" rel="stylesheet">
-      <link rel="stylesheet" href="{% static 'MediPets/css/fonts.css' %}">
+    {%load static%}
+    <link rel="icon" href="{% static 'MediPets/img/Icon.png' %}">  
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+        <link rel="stylesheet" type="text/css" href="{% static 'MediPets/css/styles.css' %}">
+        <link href="{% static 'MediPets/css/styles.css' %}" type="text/css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
     <title>Iniciar Sesion</title>
 
-    <script>
+    <script type="text/javascript">
         $(function() {
             $("#Login").validate({
                 rules: {    
@@ -113,14 +110,14 @@
 
         <div class="Contenedor-Login-Register">
             <!--Formulario de iniciar sesion-->
-            <form action="index.html" id="Login" class="Formulario-Login">
+            <form action="{% url 'index' %}" id="Login" class="Formulario-Login">
                 <h2>Iniciar sesion</h2>
                 <input type="text" name="email" placeholder="Correo Electronico">
                 <input type="password" name="contraseña" minlength="9" placeholder="Contraseña">
                 <button>Entrar</button>
             </form>
             <!--Formulario registro-->
-            <form action="index4.html" id="Registrarse" class="formulario-Register">
+            <form action="{% url 'iniciosesion' %}" id="Registrarse" class="formulario-Register">
                 <h2>Regístrarse</h2>
                 <input type="text" name="nombre" minlength="3" placeholder="Nombres">
                 <input type="text" name="apellido" minlength="10" placeholder="Apellidos">
@@ -133,6 +130,6 @@
         </div>
     </div>
     </main>
-    <script src="js/main.js"></script>
+    <script src=" {% static 'MediPets/js/main.js' %}"></script>
 </body>
 </html>
