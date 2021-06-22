@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+     
+    <title>MediPets</title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+    {%load static%}
+    <link rel="icon" href="{% static 'MediPets/img/Icon.png' %}">   
+    <link rel="stylesheet" type="text/css" href="{% static 'MediPets/css/styles.css ' %}">
+    <link href="{% static 'MediPets/css/styles.css ' %}" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'MediPets/css/Fonts.css' %}">
+
+</head>
+<body>
+    {%load static%}
+      <a href="{% url 'index' %}">
+        <img  src ="{% static 'MediPets/img/logo_large.png' %}" width="350px"  height= "85" ></a>
+        <br>
+        <header>
+          <a href="{% url 'iniciosesion' %}" class="login">
+            <span class="icon-user"></span>Iniciar Sesion
+            </a>
+            <a href="{% url 'crear' %}" class="login">
+              <span class="icon-heart"></span>Mascota
+              </a>
+          <h1>Mascotas De MediPets</h1>
+          <input type="checkbox" id="btnMenu">
+          <label for="btnMenu" class="icon-menu">
+          </label>
+          <nav class="menu flex-container" id="backgroundhead">
+            <center>
+              <ul>
+                  <li><a href="{% url 'index'%}" class="button home radius medium ">
+                      <span class="icon-home"></span>Inicio</a></li>
+                  <li><a href="{% url 'galeria' %}" class="button Fotos medium radius ">
+                      <span class="icon-images"></span>Galeria</a></li>
+                  <li><a href="{% url 'nosotros' %}" class="button QuienesSomos medium radius ">
+                      <span class="icon-users"></span>Nosotros</a></li>
+                  <li><a href="{% url 'ver' %}" class="button QuienesSomos medium radius ">
+                      <span class="icon-rocket"></span>Mascotas Registradas</a></li>    
+              </ul>
+            </center>
+          </nav>
+      </header>
+      <div class="ContenedorVer">
+            <div class="ContenedorVerTitulo">
+                <br><br>
+                <h3>Mascotas Registradas</h3><br><br>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Numero Mascota</th>
+                        <th scope="col">Nombre Mascota</th>
+                        <th scope="col">Nombre Dueño</th>
+                        <th scope="col">Tipo Mascota</th>
+                        <th scope="col">Modificar</th>
+                        <th scope="col">Eliminar</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for ve in usuarios%}
+                        <tr>
+                            <td>{{ve.nroChip}}</td>
+                            <td>{{ve.nombre}}</td>
+                            <td>{{ve.dueno}}</td>
+                            <td>{{ve.tipo}}</td>
+                            <td ><a href="{% url 'Modificar' ve.nroChip%}" class="modi">Modificar   </a></td>
+                            <td><a href="{% url 'Eliminar' ve.nroChip%}" class="eli">Eliminar </a></td>
+                    {%endfor%}
+        
+                </tbody>
+                </table>
+            </div>
+
+
+      </div>
+      <br><br><br><br>
+    </div>
+    <div class="row">
+      <div class="col-xl-4 fondo" >
+        <h5>Veterinaria </h5> 
+        <ul type= ""><li>Nosotros</li>
+          <li>Galeria</li>
+        </ul>
+      </div>
+      <div class="col-xl-4 fondo">
+        <h5>Hospital Clínico</h5> 
+        <div class ="tamaño2 "><p>Dirección: <br>Av. Nueva San Martin 1331. Maipu</p>
+        <p>Telefono: <br> (+56) 2 2232 5537 </p>
+        <p>Email: <br>MediPets@Gmail.com</p>
+        <p>Atención las 24hrs</p></div>
+      </div>
+      <div class="col-xl-4 fondo " >
+        <h5>Sucursal</h5> 
+        <div class ="tamaño2 "><p>Dirección: <br>Av. Americo Vespucio 1075 - Local 5</p>
+        <p>Telefono: <br> (+56) 2 4672 2348 </p>
+        <p>Email: <br>petsvete@gmail.cl</p>
+        <p>Atención de 10 a 20hrs</p></div>
+        <h5 class="copy">«Copyright 2020 por MediPets Chile»</h5>
+        <figure>
+          <img src="{% static 'MediPets/img/iconfb.png' %}" width="13px" height="13px">
+        </figure>
+        <figure><img src="{% static 'MediPets/img/iconig.png' %}" width="13px" height="13px"></figure>
+        <figure><img src="{% static 'MediPets/img/icontwitter.png' %}" width="13px" height="13px"></figure>
+      </div>
+    </div>
+</body>
+</html>

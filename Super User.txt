@@ -1,0 +1,4 @@
+Super usuario:
+
+Nombre: ADMIN
+Contraseña: 1234
